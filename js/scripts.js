@@ -9,3 +9,12 @@ button1.addEventListener("click", function () {
 		button1.innerHTML = "Click me to change ;-O";
 	}
 });
+
+subscribeForm = document.getElementById("sub-form");
+
+subscribeForm.addEventListener("submit", function (e) {
+	e.preventDefault();
+	successMsg = `<h4 class="thanks-msg">Thank you for subscribing</h3>`;
+	document.querySelector(".success-msg").innerHTML = successMsg;
+	subscribeForm.reset();
+});
